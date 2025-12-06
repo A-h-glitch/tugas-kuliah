@@ -1,1 +1,1 @@
-ada di branc satu lagi
+ada di branc masing masing
