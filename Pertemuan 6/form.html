@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Belanja Alat Tulis</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; background: #f4f4f4; }
+        .form-container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; }
+        label { display: block; margin: 15px 0 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        .radio-group, .checkbox-group { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 5px; }
+        .radio-group label, .checkbox-group label { display: flex; align-items: center; font-weight: normal; margin: 0; flex: 1; min-width: 120px; }
+        .qty-group { display: flex; gap: 10px; align-items: center; margin-top: 5px; }
+        .qty-group input[type="number"] { width: 80px; }
+        button { background: #4CAF50; color: white; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%; margin-top: 20px; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Pendaftaran Belanja Alat Tulis</h1>
+        <form action="proses.php" method="POST">
+            <label for="nama">Nama Mahasiswa:</label>
+            <input type="text" id="nama" name="nama" required minlength="3" maxlength="50">
+
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim" required pattern="[0-9]{8,10}" title="NIM minimal 8-10 angka">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Jenis Layanan:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="layanan" value="Reguler" required>Reguler</label>
+                <label><input type="radio" name="layanan" value="Prioritas" required>Prioritas</label>
+                <label><input type="radio" name="layanan" value="prioritas" required>kargo</label>
+            </div>
+
+            <label>Pilihan Barang:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="pulpen"> Pulpen</label>
+                <label><input type="checkbox" name="buku"> Buku Tulis</label>
+                <label><input type="checkbox" name="penggaris"> Penggaris</label>
+                <label><input type="checkbox" name="merchandise"> Merchandise</label>
+                <label><input type="checkbox" name="polio"> Polio</label>
+                <label><input type="checkbox" name="alatMandi"> Alat Mandi</label>
+                <label><input type="checkbox" name="television"> Television</label>
+                <label><input type="checkbox" name="makan"> Makanan Berat</label>
+            </div>
+
+            <div class="qty-group">
+                <label for="qty_pulpen">Jumlah Pulpen:</label>
+                <input type="number" id="qty_pulpen" name="qty_pulpen" min="1" value="0">
+            </div>
+            <div class="qty-group">
+                <label for="qty_buku">Jumlah Buku:</label>
+                <input type="number" id="qty_buku" name="qty_buku" min="1" value="0">
+            </div>
+            <div class="qty-group">
+                <label for="qty_penggaris">Jumlah Penggaris:</label>
+                <input type="number" id="qty_penggaris" name="qty_penggaris" min="1" value="0">
+            </div>
+            <div class="qty-group">
+                <label for="qty_merchandise">Jumlah Merchandise:</label>
+                <input type="number" id="qty_penggaris" name="qty_merchandise" min="1" value="0">
+            </div>
+            <div class="qty-group">
+                <label for="qty_alatMandi">Jumlah Alat Mandi:</label>
+                <input type="number" id="qty_penggaris" name="qty_alatMandi" min="1" value="0">
+            </div>
+            <div class="qty-group">
+                <label for="qty_television">Jumlah Penggaris:</label>
+                <input type="number" id="qty_penggaris" name="qty_television" min="1" value="0">
+            </div>
+            <div class="qty-group">
+                <label for="qty_makan">Jumlah Makanan Berat:</label>
+                <input type="number" id="qty_penggaris" name="qty_makan" min="1" value="0">
+            </div>
+            <button type="submit">Kirim Akumulasi</button>
+        </form>
+    </div>
+</body>
+</html>

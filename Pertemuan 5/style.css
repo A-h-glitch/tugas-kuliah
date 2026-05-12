@@ -1,0 +1,78 @@
+/* Simple styles for Tugas3.html */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4ff;
+    color: #1b263b;
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.container {
+    width: min(480px, 100%);
+    max-width: 480px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(32, 45, 76, 0.12);
+    border: 1px solid rgba(47, 79, 126, 0.08);
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: 1.6rem;
+    color: #0f2448;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2f4f76;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #cdd6e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #12263f;
+    background: #f8fbff;
+}
+
+button {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #3b67d4;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #2d53b8;
+}
+
+#hasil {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #eef4ff;
+    border: 1px solid #d6e2ff;
+    color: #10316b;
+    line-height: 1.7;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 103, 212, 0.16);
+}
