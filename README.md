@@ -1,1 +1,1 @@
-ada di branc masing masing
+Setiap mata kuliah memiliki branc masing masing
